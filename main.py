@@ -16,7 +16,7 @@ from flask_gravatar import Gravatar
 dotenv.load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("APP_KEY")
+app.config['SECRET_KEY'] = os.environ['APP-KEY']
 ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro',
